@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import com.android.WorkOutDay23.EditInfoActivity;
 import com.android.WorkOutDay23.LoginActivity;
 import com.android.WorkOutDay23.application.KeepApplication;
+import com.android.WorkOutDay23.bean.UserInfo;
 import com.android.WorkOutDay23.databinding.FragmentPersonalBinding;
 
 
@@ -47,5 +48,18 @@ public class PersonalFragment extends Fragment {
                 startActivity(new Intent(getActivity(), EditInfoActivity.class));
             }
         });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        UserInfo userInfoById = KeepApplication.db.userInfoDao().getUserInfoById(KeepApplication.getLoginUser().getId());
+        if (userInfoById == null){
+            return;
+        }
+        mBinding.tvUserName.setText(userInfoById.getName());
+        mBinding.tvUserAge.setText("age :"+userInfoById.getAge());
+        mBinding.tvUserWeight.setText("weight :"+userInfoById.getWeight());
+        mBinding.tvUserHeight.setText("height :"+userInfoById.getHeight());
     }
 }

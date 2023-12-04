@@ -25,6 +25,16 @@ public class UserInfo {
     private String height;
     @ColumnInfo
     private String weight;
+    @ColumnInfo
+    private int userId;
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
 
     public UserInfo() {
     }

@@ -1,10 +1,10 @@
 package com.android.WorkOutDay23;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.WorkOutDay23.application.KeepApplication;
 import com.android.WorkOutDay23.bean.UserInfo;
@@ -47,11 +47,18 @@ public class EditInfoActivity extends AppCompatActivity {
                     return;
                 }
                 UserInfo userInfo = new UserInfo();
+                userInfo.setUserId(KeepApplication.getLoginUser().getId());
                 userInfo.setName(mBinding.etEditName.getText().toString());
                 userInfo.setAge(mBinding.etEditAge.getText().toString());
                 userInfo.setHeight(mBinding.etEditHight.getText().toString());
                 userInfo.setWeight(mBinding.etEditWeight.getText().toString());
-                KeepApplication.db.userInfoDao().addUserInfo(userInfo);
+                UserInfo userInfoById = KeepApplication.db.userInfoDao().getUserInfoById(userInfo.getUserId());
+                if (userInfoById == null){
+                    KeepApplication.db.userInfoDao().addUserInfo(userInfo);
+                } else {
+                    KeepApplication.db.userInfoDao().updateUserInfoById(userInfo.getUserId(), userInfo.getName(),
+                            userInfo.getAge(), userInfo.getWeight(), userInfo.getHeight());
+                }
 
                 Toast.makeText(EditInfoActivity.this,"Information saved",Toast.LENGTH_LONG).show();
             }
