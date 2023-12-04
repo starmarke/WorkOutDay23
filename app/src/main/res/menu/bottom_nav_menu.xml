@@ -20,4 +20,10 @@
         android:orderInCategory="2"
         android:title="My Page" />
 
+    <item
+        android:id="@+id/navigation_reward"
+        android:icon="@mipmap/mo_icon_home_white"
+        android:orderInCategory="2"
+        android:title="Reward" />
+
 </menu>
