@@ -16,13 +16,13 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.158" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="280dp"
+        android:layout_marginBottom="240dp"
         android:text="One Month"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,7 +34,7 @@
         android:id="@+id/textView3"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="280dp"
+        android:layout_marginBottom="240dp"
         android:text="Two weeks"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,7 +46,7 @@
         android:id="@+id/textView2"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="456dp"
+        android:layout_marginBottom="380dp"
         android:text="Seven Days"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -70,7 +70,7 @@
         android:id="@+id/imageView"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="488dp"
+        android:layout_marginBottom="420dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.256"
@@ -81,19 +81,19 @@
         android:id="@+id/textView"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="456dp"
+        android:layout_marginBottom="380dp"
         android:text="First Day"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintHorizontal_bias="0.256"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="168dp"
+        android:layout_marginBottom="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -104,7 +104,7 @@
         android:id="@+id/imageView7"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="324dp"
+        android:layout_marginBottom="276dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.259"
@@ -120,18 +120,30 @@
         app:layout_constraintHorizontal_bias="0.764"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.502"
+        app:layout_constraintVertical_bias="0.576"
         app:srcCompat="@mipmap/one_month" />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="488dp"
+        android:layout_marginBottom="420dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.764"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/seven_days" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.235" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
