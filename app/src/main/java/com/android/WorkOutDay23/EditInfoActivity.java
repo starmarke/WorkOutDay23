@@ -47,18 +47,18 @@ public class EditInfoActivity extends AppCompatActivity {
                     return;
                 }
                 UserInfo userInfo = new UserInfo();
-//                userInfo.setUserId(KeepApplication.getLoginUser().getId());
+                userInfo.setUserId(KeepApplication.getLoginUser().getId());
                 userInfo.setName(mBinding.etEditName.getText().toString());
                 userInfo.setAge(mBinding.etEditAge.getText().toString());
                 userInfo.setHeight(mBinding.etEditHight.getText().toString());
                 userInfo.setWeight(mBinding.etEditWeight.getText().toString());
-//                UserInfo userInfoById = KeepApplication.db.userInfoDao().getUserInfoById(userInfo.getUserId());
-//                if (userInfoById == null){
-//                    KeepApplication.db.userInfoDao().addUserInfo(userInfo);
-//                } else {
-//                    KeepApplication.db.userInfoDao().updateUserInfoById(userInfo.getUserId(), userInfo.getName(),
-//                            userInfo.getAge(), userInfo.getWeight(), userInfo.getHeight());
-//                }
+                UserInfo userInfoById = KeepApplication.db.userInfoDao().getUserInfoById(userInfo.getUserId());
+                if (userInfoById == null){
+                    KeepApplication.db.userInfoDao().addUserInfo(userInfo);
+                } else {
+                    KeepApplication.db.userInfoDao().updateUserInfoById(userInfo.getUserId(), userInfo.getName(),
+                            userInfo.getAge(), userInfo.getWeight(), userInfo.getHeight());
+                }
 
                 Toast.makeText(EditInfoActivity.this,"Information saved",Toast.LENGTH_LONG).show();
             }

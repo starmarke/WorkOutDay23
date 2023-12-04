@@ -11,6 +11,7 @@ import com.android.WorkOutDay23.base.BaseActivity;
 import com.android.WorkOutDay23.databinding.ActivityMainBinding;
 import com.android.WorkOutDay23.fragment.HomeFragment;
 import com.android.WorkOutDay23.fragment.PersonalFragment;
+import com.android.WorkOutDay23.fragment.RewardFragment;
 import com.android.WorkOutDay23.fragment.SportFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.gyf.immersionbar.ImmersionBar;
@@ -29,6 +30,7 @@ public class MainActivity extends BaseActivity {
         viewPagerAdapter.addFragment(new HomeFragment());
         viewPagerAdapter.addFragment(new SportFragment());
         viewPagerAdapter.addFragment(new PersonalFragment());
+        viewPagerAdapter.addFragment(new RewardFragment());
 
         mBinding.viewPager.setAdapter(viewPagerAdapter);
 
@@ -50,6 +52,9 @@ public class MainActivity extends BaseActivity {
                         return true;
                     case R.id.navigation_personal:
                         mBinding.viewPager.setCurrentItem(2);
+                        return true;
+                    case R.id.navigation_reward:
+                        mBinding.viewPager.setCurrentItem(3);
                         return true;
                 }
                 return false;
