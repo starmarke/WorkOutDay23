@@ -50,16 +50,16 @@ public class PersonalFragment extends Fragment {
         });
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        UserInfo userInfoById = KeepApplication.db.userInfoDao().getUserInfoById(KeepApplication.getLoginUser().getId());
-        if (userInfoById == null){
-            return;
-        }
-        mBinding.tvUserName.setText(userInfoById.getName());
-        mBinding.tvUserAge.setText("age :"+userInfoById.getAge());
-        mBinding.tvUserWeight.setText("weight :"+userInfoById.getWeight());
-        mBinding.tvUserHeight.setText("height :"+userInfoById.getHeight());
-    }
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        UserInfo userInfoById = KeepApplication.db.userInfoDao().getUserInfoById(KeepApplication.getLoginUser().getId());
+//        if (userInfoById == null){
+//            return;
+//        }
+//        mBinding.tvUserName.setText(userInfoById.getName());
+//        mBinding.tvUserAge.setText("age :"+userInfoById.getAge());
+//        mBinding.tvUserWeight.setText("weight :"+userInfoById.getWeight());
+//        mBinding.tvUserHeight.setText("height :"+userInfoById.getHeight());
+//    }
 }
